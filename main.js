@@ -4,6 +4,7 @@ var Tray = require('tray');
 var path = require('path');
 var globalShortcut = require('global-shortcut');
 var os = require('os');
+var respondersMgr = require('./app/respondersMgr');
 
 voiceBox = require('./app/voicebox');
 
@@ -12,6 +13,8 @@ var settings = require('./app/settings');
 var updater = require('./app/updater');
 updater.checkForUpdate(app);
 
+
+respondersMgr.init(voiceBox);
 // require all files in the /responses directory
 var responsesPath = require("path").join(__dirname, "responders");
 require("fs").readdirSync(responsesPath).forEach(function(file) {

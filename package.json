@@ -20,6 +20,7 @@
     "electron-rebuild": "^1.0.0"
   },
   "dependencies": {
+    "async": "^1.4.2",
     "configstore": "^1.2.1",
     "request": "^2.63.0",
     "timer.js": "^1.0.3"
